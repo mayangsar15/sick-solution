@@ -12,6 +12,9 @@ window.addEventListener('load', () => {
   document.body.style.opacity = 1;
 });
 
-document.querySelector(".menu-toggle").addEventListener("click", () => {
-  document.querySelector("nav ul").classList.toggle("show");
-});
+const toggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('nav ul');
+
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
