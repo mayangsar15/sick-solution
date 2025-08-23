@@ -17,17 +17,27 @@ main {
 
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* logo kiri, toggle/menu kanan */
   align-items: center;
-  padding: 1em 1.5em; /* kasih ruang kiri-kanan biar logo ga nempel */
+  padding: 0.5em 1em;
   background: transparent;
-  color: white;
   position: sticky;
   top: 0;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.logo img {
+  width: 40px;
+  height: auto;
+}
+
 .menu-toggle {
-  display: none; /* default hidden */
+  display: none; /* hidden default */
   font-size: 1.8em;
   background: none;
   border: none;
@@ -43,25 +53,25 @@ nav ul {
 
 @media (max-width: 768px) {
   nav ul {
-    display: none; /* hide menu by default */
+    display: none;
     flex-direction: column;
     position: absolute;
     top: 60px;
-    right: 20px;
-    background: rgba(0, 122, 204, 0.9);
+    right: 15px;
+    background: rgba(0, 122, 204, 0.95);
     padding: 1em;
     border-radius: 10px;
+    z-index: 1000;
   }
 
   nav ul.active {
-    display: flex; /* show menu saat tombol burger diklik */
+    display: flex;
   }
 
   .menu-toggle {
     display: block; /* show burger in mobile */
   }
 }
-
 
 .logo {
   display: flex;
