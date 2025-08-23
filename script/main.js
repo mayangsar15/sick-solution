@@ -11,3 +11,7 @@ document.querySelectorAll('a[href$=".html"]').forEach(link => {
 window.addEventListener('load', () => {
   document.body.style.opacity = 1;
 });
+
+document.querySelector(".menu-toggle").addEventListener("click", () => {
+  document.querySelector("nav ul").classList.toggle("show");
+});
