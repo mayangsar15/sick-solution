@@ -12,6 +12,7 @@ window.addEventListener('load', () => {
   document.body.style.opacity = 1;
 });
 
+// JS toggle
 const toggle = document.querySelector('.menu-toggle');
 const menu = document.querySelector('nav ul');
 

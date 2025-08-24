@@ -17,43 +17,26 @@ main {
 
 nav {
   display: flex;
-  justify-content: space-between; /* logo kiri, toggle/menu kanan */
+  justify-content: space-between;
   align-items: center;
   padding: 0.5em 1em;
   background: transparent;
-  z-index: 1001;
-  position: sticky;
-  top: 0;
-}
-
-nav ul.active {
-  z-index: 1002;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-}
-
-.logo img {
-  width: 40px;
-  height: auto;
-}
-
-.menu-toggle {
-  display: none; /* hidden default */
-  font-size: 1.8em;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
+  position: relative;
+  z-index: 1000;
 }
 
 nav ul {
-  list-style: none;
   display: flex;
   gap: 1em;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8em;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
 }
 
 .logo {
@@ -66,16 +49,10 @@ nav ul {
 }
 
 .logo img {
-  width: 25px;
-  height: 25px;
+  width: 40px;
+  height: auto;
   object-fit: contain;
   border-radius: 5px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1em;
 }
 
 nav a {
@@ -278,24 +255,25 @@ footer {
   }
 
    .menu-toggle {
-      display: block;
+    display: block;
   }
 
-    nav ul {
-     position: fixed; /* biar di atas semua */
-     top: 0;
-     right: -250px; /* sembunyikan dulu di kanan */
-     width: 200px;
-     height: 100vh;
-     background: rgba(0,122,204,0.95);
-     flex-direction: column;
-     padding: 2em 1em;
-     gap: 1.5em;
-     transition: right 0.3s ease;
-     z-index: 1000;
+   nav ul {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100vh;
+    background: rgba(0,122,204,0.95);
+    flex-direction: column;
+    align-items: start;
+    padding: 2em 1em;
+    gap: 1.5em;
+    transform: translateX(100%); /* sembunyikan di kanan */
+    transition: transform 0.3s ease;
   }
 
   nav ul.active {
-    right: 0; /* muncul dari kanan */
+    transform: translateX(0); /* muncul */
   }
 }
