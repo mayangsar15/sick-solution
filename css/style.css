@@ -26,19 +26,8 @@ nav {
 }
 
 .navul {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 220px;
-  height: 100vh;
-  background: rgba(0, 122, 204, 0.95);
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 2em 1em;
-  gap: 1.5em;
-  transform: translateX(100%);
-  transition: transform 0.3s ease;
-  z-index: 1002;
+  display: flex;
+  gap: 1em;
 }
 
 
@@ -239,16 +228,27 @@ footer {
   }
 
   .menu-toggle {
-    display: none;
+    display: block;
+    font-size: 1.8em;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
   }
   .navul {
-    position: static;
-    flex-direction: row;
-    height: auto;
-    width: auto;
-    background: transparent;
-    transform: translateX(0);
-    display: flex; /* pastikan terlihat */
+   position: fixed;
+   top: 0;
+   right: 0;
+   width: 220px; /* lebar nav menu */
+   height: 100vh;
+   background: rgba(0, 122, 204, 0.95);
+   flex-direction: column;
+   align-items: flex-start;
+   padding: 2em 1em;
+   gap: 1.5em;
+   transform: translateX(100%); /* sembunyikan */
+   transition: transform 0.3s ease;
+   z-index: 1002; /* pastikan di atas semua */
   }
 
   .navul.active {
