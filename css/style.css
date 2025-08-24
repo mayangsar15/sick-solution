@@ -219,6 +219,7 @@ footer {
 
   /* Nav */
   nav {
+    display: flex;
     flex-direction: row; /* logo kiri, toggle kanan */
     justify-content: space-between;
     align-items: center;
@@ -254,4 +255,10 @@ footer {
   .navul.active {
     transform: translateX(0); /* muncul */
   }
+
+  .navul li a {
+  color: white;
+  text-decoration: none;
+}
+
 }

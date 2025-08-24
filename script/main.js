@@ -25,3 +25,8 @@ toggle.addEventListener('click', (e) => {
   e.stopPropagation(); // pastikan tidak tertangkap event bubbling
   menu.classList.toggle('active');
 });
+
+toggle.addEventListener('click', () => {
+  console.log('tombol ditekan!');
+  menu.classList.toggle('active');
+});
