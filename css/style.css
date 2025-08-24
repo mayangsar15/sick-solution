@@ -189,8 +189,7 @@ nav a:hover {
 .service-list {
   overflow: hidden;
   white-space: nowrap;
-  width: 100%;
-  padding: 40px 0;
+  padding: 40px 0 40px 20px; /* tambahkan padding-left */
 }
 
 .service-track {
