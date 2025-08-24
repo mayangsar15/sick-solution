@@ -19,7 +19,7 @@ window.addEventListener('load', () => {
 
 // Toggle nav
 const toggle = document.querySelector('.menu-toggle');
-const menu = document.querySelector('nav ul');
+const menu = document.querySelector('.navul');
 
 toggle.addEventListener('click', (e) => {
   e.stopPropagation(); // pastikan tidak tertangkap event bubbling

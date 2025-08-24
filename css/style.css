@@ -235,7 +235,7 @@ footer {
     cursor: pointer;
   }
 
-  nav ul {
+  .navul {
     position: fixed;
     top: 0;
     right: 0;
@@ -251,7 +251,7 @@ footer {
     z-index: 1002; /* pastikan di atas semua */
   }
 
-  nav ul.active {
+  .navul.active {
     display: block;
     transform: translateX(0); /* muncul */
   }
