@@ -191,50 +191,62 @@ footer {
 
 /* ---------------- Responsive ---------------- */
     
- @media (max-width: 900px) { 
- .hero-grid {
-    grid-template-columns: 1fr; 
+@media (max-width: 768px) {
+  /* Hero tetap responsif */
+  .hero-grid {
+    grid-template-columns: 1fr;
     text-align: center;
     height: auto;
     padding: 2em 1em;
   }
 
-  .service-track { 
-    flex-wrap: wrap; 
-    animation: none; 
-    justify-content: center; 
-  } 
-      
-  .card { 
-    min-width: 90%; 
-    margin-bottom: 15px; 
-  } 
-      
+  /* Service tetap horizontal tapi center */
+  .service-track {
+    flex-wrap: nowrap; /* jangan wrap supaya tetap horizontal */
+    overflow-x: auto;  /* scroll horizontal kalau kebesaran */
+    animation: none;
+    justify-content: flex-start; /* tetap horizontal dari kiri */
+    gap: 20px;
+  }
+
+  .card {
+    min-width: 200px; /* bisa disesuaikan */
+    margin-bottom: 15px;
+  }
+
+  /* Nav */
   nav {
     flex-direction: row; /* logo kiri, toggle kanan */
     justify-content: space-between;
     align-items: center;
     padding: 0.5em 1em;
     position: relative;
+    z-index: 1001;
   }
 
-   .menu-toggle {
+  .menu-toggle {
     display: block;
+    font-size: 1.8em;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
   }
 
-   nav ul {
+  nav ul {
     position: fixed;
     top: 0;
     right: 0;
-    width: 200px;
+    width: 220px; /* lebar nav menu */
     height: 100vh;
-    background: rgba(0,122,204,0.95);
+    background: rgba(0, 122, 204, 0.95);
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     padding: 2em 1em;
     gap: 1.5em;
-    transform: translateX(100%); /* sembunyikan di kanan */
+    transform: translateX(100%); /* sembunyikan */
     transition: transform 0.3s ease;
+    z-index: 1002; /* pastikan di atas semua */
   }
 
   nav ul.active {
