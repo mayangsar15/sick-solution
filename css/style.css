@@ -25,7 +25,7 @@ nav {
   z-index: 1000;
 }
 
-.navul {
+.nav ul {
   display: flex;
   gap: 1em;
 }
