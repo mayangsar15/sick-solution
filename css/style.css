@@ -252,7 +252,6 @@ footer {
   }
 
   .navul.active {
-    display: block;
     transform: translateX(0); /* muncul */
   }
 }
