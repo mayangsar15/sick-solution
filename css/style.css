@@ -196,6 +196,7 @@ nav a:hover {
 .service-track {
   display: flex;
   gap: 20px;
+  width: max-content; /* agar fleksibel mengikuti jumlah card */
   animation: slide 20s linear infinite;
 }
 
@@ -215,8 +216,8 @@ nav a:hover {
 }
 
 @keyframes slide {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* setengah total track untuk loop */
 }
 
 /* Contact */
