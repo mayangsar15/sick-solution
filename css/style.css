@@ -21,8 +21,13 @@ nav {
   align-items: center;
   padding: 0.5em 1em;
   background: transparent;
+  z-index: 1001;
   position: sticky;
   top: 0;
+}
+
+nav ul.active {
+  z-index: 1002;
 }
 
 .logo {
@@ -52,6 +57,23 @@ nav ul {
 }
 
 @media (max-width: 768px) {
+
+  .service-track {
+    flex-wrap: wrap;
+    animation: none;
+    justify-content: center;
+  }
+
+  .card {
+    min-width: 90%;
+    margin-bottom: 15px;
+  }
+
+ nav {
+    flex-direction: row; /* tetap row agar logo kiri dan toggle kanan */
+    justify-content: space-between;
+  }
+
   nav ul {
     display: none;
     flex-direction: column;
