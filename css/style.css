@@ -252,6 +252,7 @@ footer {
   }
 
   nav ul.active {
+    display: block;
     transform: translateX(0); /* muncul */
   }
 }
