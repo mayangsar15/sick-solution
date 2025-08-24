@@ -12,11 +12,11 @@ window.addEventListener('load', () => {
   document.body.style.opacity = 1;
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    const toggle = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
+// JavaScript toggle
+const toggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('nav ul');
 
-    toggle.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-    });
-  });
+toggle.addEventListener('click', () => {
+  menu.classList.toggle('active');
+});
+
