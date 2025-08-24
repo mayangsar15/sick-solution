@@ -56,45 +56,6 @@ nav ul {
   gap: 1em;
 }
 
-@media (max-width: 768px) {
-
-  .service-track {
-    flex-wrap: wrap;
-    animation: none;
-    justify-content: center;
-  }
-
-  .card {
-    min-width: 90%;
-    margin-bottom: 15px;
-  }
-
- nav {
-    flex-direction: row; /* tetap row agar logo kiri dan toggle kanan */
-    justify-content: space-between;
-  }
-
-  nav ul {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 15px;
-    background: rgba(0, 122, 204, 0.95);
-    padding: 1em;
-    border-radius: 10px;
-    z-index: 1000;
-  }
-
-  nav ul.active {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block; /* show burger in mobile */
-  }
-}
-
 .logo {
   display: flex;
   align-items: center;
@@ -265,26 +226,73 @@ footer {
   }
 }
 
+/* Hapus flex-direction: column di max-width 600px */
 @media (max-width: 600px) {
   nav {
-    flex-direction: column;
-    gap: 0.5em;
+    flex-direction: row; /* tetap horizontal: logo kiri, toggle kanan */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 1em;
   }
 
   nav ul {
+    display: none;
     flex-direction: column;
-    align-items: center;
+    position: absolute;
+    top: 60px;  /* sesuaikan tinggi nav */
+    right: 15px;
+    background: rgba(0, 122, 204, 0.95);
+    padding: 1em;
+    border-radius: 10px;
+    gap: 1em;
+    z-index: 1000;
   }
 
-  .hero-text h1 {
-    font-size: 2em;
+  nav ul.active {
+    display: flex;
   }
 
-  .hero-text p {
-    font-size: 1em;
+  .menu-toggle {
+    display: block;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .service-track {
+    flex-wrap: wrap;
+    animation: none;
+    justify-content: center;
   }
 
   .card {
-    min-width: 200px;
+    min-width: 90%;
+    margin-bottom: 15px;
+  }
+
+ nav {
+    flex-direction: row; /* tetap row agar logo kiri dan toggle kanan */
+    justify-content: space-between;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    background: rgba(0, 122, 204, 0.95);
+    padding: 1em;
+    border-radius: 10px;
+    z-index: 1000;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block; /* show burger in mobile */
   }
 }
