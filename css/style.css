@@ -213,86 +213,87 @@ footer {
 }
 
 /* ---------------- Responsive ---------------- */
-@media (max-width: 900px) {
+@media (max-width: 900px) { 
   .hero-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; 
     text-align: center;
     height: auto;
     padding: 2em 1em;
   }
 
-  nav ul {
-    gap: 0.5em;
-  }
-}
-
-/* Hapus flex-direction: column di max-width 600px */
-@media (max-width: 600px) {
-  nav {
-    flex-direction: row; /* tetap horizontal: logo kiri, toggle kanan */
+  nav ul { 
+    gap: 0.5em; 
+  } } 
+  
+  /* Hapus flex-direction: column di max-width 600px */ 
+  @media (max-width: 600px) {
+     nav { 
+      flex-direction: row; /* tetap horizontal: logo kiri, toggle kanan */ 
+      justify-content: space-between; 
+      align-items: center; 
+      padding: 0.5em 1em; 
+    } 
+    
+    nav ul { 
+      display: none; 
+      flex-direction: column; 
+      position: absolute; 
+      top: 60px; /* sesuaikan tinggi nav */ 
+      right: 15px; 
+      background: rgba(0, 122, 204, 0.95); 
+      padding: 1em; 
+      border-radius: 10px; 
+      gap: 1em; 
+      z-index: 1000; 
+    } 
+    
+    nav ul.active { 
+      display: flex; 
+    } 
+    
+    .menu-toggle {
+      display: block; 
+    } } 
+    
+    @media (max-width: 768px) { 
+      .service-track { 
+        flex-wrap: wrap; 
+        animation: none; 
+        justify-content: center; 
+      } 
+      
+      .card { 
+       min-width: 90%; 
+        margin-bottom: 15px; 
+      } 
+      
+      nav {
+    flex-direction: row; /* logo kiri, toggle kanan */
     justify-content: space-between;
     align-items: center;
     padding: 0.5em 1em;
-  }
-
-  nav ul {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;  /* sesuaikan tinggi nav */
-    right: 15px;
-    background: rgba(0, 122, 204, 0.95);
-    padding: 1em;
-    border-radius: 10px;
-    gap: 1em;
-    z-index: 1000;
-  }
-
-  nav ul.active {
-    display: flex;
+    position: relative;
   }
 
   .menu-toggle {
     display: block;
   }
-}
-
-
-@media (max-width: 768px) {
-
-  .service-track {
-    flex-wrap: wrap;
-    animation: none;
-    justify-content: center;
-  }
-
-  .card {
-    min-width: 90%;
-    margin-bottom: 15px;
-  }
-
- nav {
-    flex-direction: row; /* tetap row agar logo kiri dan toggle kanan */
-    justify-content: space-between;
-  }
 
   nav ul {
-    display: none;
+    position: fixed; /* biar di atas semua */
+    top: 0;
+    right: -250px; /* sembunyikan dulu di kanan */
+    width: 200px;
+    height: 100vh;
+    background: rgba(0,122,204,0.95);
     flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 15px;
-    background: rgba(0, 122, 204, 0.95);
-    padding: 1em;
-    border-radius: 10px;
+    padding: 2em 1em;
+    gap: 1.5em;
+    transition: right 0.3s ease;
     z-index: 1000;
   }
 
   nav ul.active {
-    display: flex;
+    right: 0; /* muncul dari kanan */
   }
-
-  .menu-toggle {
-    display: block; /* show burger in mobile */
-  }
-}
+    }
