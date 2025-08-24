@@ -201,17 +201,19 @@ footer {
   }
 
   /* Service tetap horizontal tapi center */
+  .service-list {
+    overflow-x: hidden;
+  }
+
   .service-track {
-    flex-wrap: nowrap; /* jangan wrap supaya tetap horizontal */
-    overflow-x: auto;  /* scroll horizontal kalau kebesaran */
-    animation: none;
-    justify-content: flex-start; /* tetap horizontal dari kiri */
-    gap: 20px;
+    flex-wrap: nowrap; /* jangan wrap */
+    animation: slide 20s linear infinite; /* tetap jalan */
+    justify-content: flex-start;
   }
 
   .card {
-    min-width: 200px; /* bisa disesuaikan */
-    margin-bottom: 15px;
+    min-width: 200px;
+    margin-bottom: 0;
   }
 
   /* Nav */
